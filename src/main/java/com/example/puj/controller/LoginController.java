@@ -28,7 +28,7 @@ public class LoginController {
         } else {
             this.errorMsg.setText("");
             Main.showWindow(
-                    "reservation.fxml",
+                    "menu.fxml",
                     "Rezervacija ", 600, 215);
         }
     }
