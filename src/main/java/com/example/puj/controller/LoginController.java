@@ -29,7 +29,7 @@ public class LoginController {
             this.errorMsg.setText("");
             Main.showWindow(
                     "menu.fxml",
-                    "Rezervacija ", 600, 215);
+                    "Izbornik ", 610, 400);
         }
     }
 }

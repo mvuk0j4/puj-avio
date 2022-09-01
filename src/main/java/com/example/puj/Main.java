@@ -13,7 +13,7 @@ public class Main extends Application {
         Main.primaryStage = stage;
         Main.showWindow(
                 "login.fxml",
-                "Prijavte se na sustav", 600, 215);
+                "Prijavte se na sustav", 610, 400);
     }
 
     public static void showWindow(String viewName, String title, int w, int h) throws IOException {

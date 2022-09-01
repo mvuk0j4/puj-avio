@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.puj.controller.MenuController">
    <children>
-      <ButtonBar layoutX="14.0" layoutY="4.0" prefHeight="50.0" prefWidth="356.0">
-        <buttons>
-          <Button fx:id="reservationBtn" mnemonicParsing="false" onAction="#openReservation" prefHeight="24.0" prefWidth="101.0" text="Rezervacije" />
-            <Button fx:id="passangerBtn" layoutX="229.0" layoutY="23.0" mnemonicParsing="false" onAction="#openPassanger" text="Putnici" />
-            <Button fx:id="planeBtn" layoutX="229.0" layoutY="23.0" mnemonicParsing="false" onAction="#openPlane" prefHeight="24.0" prefWidth="146.0" text="Avioni" />
-        </buttons>
-      </ButtonBar>
+      <ImageView fx:id="airportImg" fitHeight="400.0" fitWidth="609.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@aerodrom.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="passangerBtn" layoutX="95.0" layoutY="188.0" mnemonicParsing="false" onAction="#openPassanger" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Putnici" textFill="#fffafa" />
+      <Button fx:id="flightBtn" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#openFlight" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Letovi" textFill="#f2eeee" />
    </children>
 </AnchorPane>

@@ -18,4 +18,5 @@ module com.example.puj {
     exports com.example.puj;
     exports com.example.puj.controller;
     opens com.example.puj.controller to javafx.fxml;
+
 }
