@@ -17,6 +17,11 @@ public class MenuController implements Initializable {
     @FXML
     Button flightBtn;
 
+    @FXML
+    Button reservationBtn;
+
+    @FXML
+    Button logoutBtn;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -40,4 +45,19 @@ public class MenuController implements Initializable {
         );
     }
 
+    @FXML
+    protected void openReservation() throws IOException{
+        Main.showWindow(
+                "reservationf.fxml",
+                "Rezervacije",610,400
+        );
+    }
+
+    @FXML
+    protected void openLogin() throws IOException{
+        Main.showWindow(
+                "login.fxml",
+                "Prijavite se na sustav",610,400
+        );
+    }
 }

@@ -109,15 +109,25 @@ public class FlightController implements Initializable {
     }
     @FXML
     protected void deleteFlight(){
+        Flight selectedFlight = (Flight) this.flightTbl.getSelectionModel().getSelectedItem();
         if (selectedFlight != null){
             try {
                 selectedFlight.delete();
-                //     this.fillCategories();
+                    this.fillFlights();
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+    @FXML
+    protected void removeSelection(){
+        this.fillFlights();
+        this.selectedFlight = null;
+        this.addBtn.setText("Dodaj");
+        this.startTxt.setText("");
+        this.destinationTxt.setText("");
+        this.priceTxt.setText("");
     }
     @FXML
     protected void goBack(){

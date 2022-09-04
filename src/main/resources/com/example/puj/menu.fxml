@@ -12,7 +12,9 @@
             <Image url="@aerodrom.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="passangerBtn" layoutX="95.0" layoutY="188.0" mnemonicParsing="false" onAction="#openPassanger" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Putnici" textFill="#fffafa" />
-      <Button fx:id="flightBtn" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#openFlight" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Letovi" textFill="#f2eeee" />
+      <Button fx:id="passangerBtn" layoutX="95.0" layoutY="188.0" mnemonicParsing="false" onAction="#openPassanger" prefHeight="24.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Putnici" textFill="#fffafa" />
+      <Button fx:id="flightBtn" layoutX="423.0" layoutY="188.0" mnemonicParsing="false" onAction="#openFlight" prefHeight="24.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Letovi" textFill="#f2eeee" />
+      <Button fx:id="reservationBtn" layoutX="262.0" layoutY="188.0" mnemonicParsing="false" onAction="#openReservation" prefHeight="24.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Rezervacije" textFill="#f5f2f2" />
+      <Button fx:id="logoutBtn" layoutX="473.0" layoutY="329.0" mnemonicParsing="false" onAction="#openLogin" prefHeight="24.0" prefWidth="100.0" style="-fx-background-color: red;" text="Odjava" textFill="#f5f2f2" />
    </children>
 </AnchorPane>
