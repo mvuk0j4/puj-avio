@@ -78,7 +78,7 @@ public class PassangerController implements Initializable {
       //  String type = this.typeTxt.getText();
 
        // int type1= Integer.parseInt(type);
-        if (this.selectedPassanger == null){
+
         if (name.equals("") || surname.equals("") || mail.equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING, "Molimo unesite sve podatke!", ButtonType.OK);
             alert.setTitle("Upozorenje!!!");
@@ -112,18 +112,31 @@ public class PassangerController implements Initializable {
                 System.out.println(e.getMessage());
             }
         }
-        }else {
-            this.selectedPassanger.setName(name);
-            this.selectedPassanger.setSurname(surname);
-            this.selectedPassanger.setMail(mail);
-         //   this.selectedPassanger.setType(type1);
-            try {
-                this.selectedPassanger.update();
-                this.removeSelection();
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+
         }
+
+
+    @FXML
+    protected void selectPassanger(){
+        this.selectedPassanger = (Passanger) this.passangerTbl.getSelectionModel().getSelectedItem();
+        this.addBtn.setText("Uredi");
+        this.nameTxt.setText(this.selectedPassanger.getName());
+        this.surnameTxt.setText(this.selectedPassanger.getSurname());
+        this.mailTxt.setText(this.selectedPassanger.getMail());
+        //  int type1 = Integer.parseInt(this.typeTxt.getText());
+        // this.typeTxt.setText(Integer.toString(type1));
+    }
+
+    @FXML
+    protected void removeSelection(){
+        this.fillPassangers();
+        this.selectedPassanger = null;
+        this.addBtn.setText("Dodaj");
+        this.nameTxt.setText("");
+        this.surnameTxt.setText("");
+        this.mailTxt.setText("");
+        // this.typeTxt.setText("");
+
     }
     @FXML
     protected void deletePassanger(){
@@ -136,28 +149,9 @@ public class PassangerController implements Initializable {
             }
         }
     }
-    @FXML
-    protected void removeSelection(){
-        this.fillPassangers();
-        this.selectedPassanger = null;
-        this.addBtn.setText("Dodaj");
-        this.nameTxt.setText("");
-        this.surnameTxt.setText("");
-        this.mailTxt.setText("");
-       // this.typeTxt.setText("");
 
-    }
 
-    @FXML
-    protected void selectPassanger(){
-        this.selectedPassanger = (Passanger) this.passangerTbl.getSelectionModel().getSelectedItem();
-        this.addBtn.setText("Uredi");
-        this.nameTxt.setText(this.selectedPassanger.getName());
-        this.surnameTxt.setText(this.selectedPassanger.getSurname());
-        this.mailTxt.setText(this.selectedPassanger.getMail());
-      //  int type1 = Integer.parseInt(this.typeTxt.getText());
-       // this.typeTxt.setText(Integer.toString(type1));
-    }
+
     @FXML
     protected void goBack(){
         try {
